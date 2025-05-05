@@ -144,3 +144,25 @@ This section outlines the core entities and their relationships within the datab
 * A **Review** is written by one **User** (Many-to-One: Review -> User).  
 * A **Review** pertains to one **Property** (Many-to-One: Review -> Property).  
 * A **Payment** corresponds to one **Booking** (Many-to-One: Payment -> Booking).  
+
+## ✨ Feature Breakdown
+
+This section details the core functional components of the Airbnb Clone backend.
+
+* **User Management**
+    This feature provides the necessary infrastructure for handling user accounts. It includes secure registration, login authentication (verifying user identity), and allows users to manage their profile details, establishing the foundation for interactions within the platform.
+
+* **Property Management**
+    This component enables hosts to create, display, update, and remove property listings. It involves storing and retrieving property details like location, description, pricing, and availability, thereby populating the platform with rentable spaces.
+
+* **Booking System**
+    This feature facilitates the core reservation process for properties. Users can check availability, make bookings for specific dates, and manage their reservation details, coordinating the temporary rental agreement between guests and hosts.
+
+* **Payment Processing**
+    This integrates secure payment handling for booking transactions. It manages the collection of funds from guests upon booking confirmation and ensures the recording of payment statuses, enabling the financial aspect of the rental process.
+
+* **Review System**
+    This allows authenticated users (typically guests after a stay) to submit ratings and written feedback about properties. This contributes to building trust within the community by providing insights into property quality and host service based on past user experiences.
+
+* **Data Optimization**
+    This backend aspect focuses on ensuring the application runs efficiently, even with large amounts of data. Techniques like database indexing and caching are employed to speed up data retrieval and reduce server load, leading to a smoother user experience.
