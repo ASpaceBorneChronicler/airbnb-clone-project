@@ -83,3 +83,64 @@ POST /reviews/ - Create a new review
 GET /reviews/{review_id}/ - Retrieve a specific review  
 PUT /reviews/{review_id}/ - Update a specific review  
 DELETE /reviews/{review_id}/ - Delete a specific review  
+
+## 💾 Database Design
+
+This section outlines the core entities and their relationships within the database schema.
+
+### Key Entities
+
+1.  **Users**
+    * `user_id`: Primary Key, unique identifier for the user.  
+    * `email`: Unique identifier for login, required.  
+    * `password_hash`: Hashed password for security.  
+    * `first_name`: User's first name.  
+    * `created_at`: Timestamp of user creation.  
+
+2.  **Properties**
+    * `property_id`: Primary Key, unique identifier for the property.  
+    * `host_id`: Foreign Key referencing `Users(user_id)`, indicating the owner/host.  
+    * `title`: Name or title of the property listing.  
+    * `address`: Physical address of the property.  
+    * `price_per_night`: Cost to book the property for one night.   
+    * `created_at`: Timestamp of property listing creation.   
+
+3.  **Bookings**
+    * `booking_id`: Primary Key, unique identifier for the booking.  
+    * `guest_id`: Foreign Key referencing `Users(user_id)`, indicating the user who made the booking.  
+    * `property_id`: Foreign Key referencing `Properties(property_id)`, indicating the property being booked.  
+    * `check_in_date`: Start date of the booking.  
+    * `check_out_date`: End date of the booking.  
+    * `total_price`: Calculated total cost for the stay.  
+    * `booking_status`: Current status (e.g., 'confirmed', 'pending', 'cancelled').  
+
+4.  **Reviews**
+    * `review_id`: Primary Key, unique identifier for the review.  
+    * `user_id`: Foreign Key referencing `Users(user_id)`, indicating the user who wrote the review.  
+    * `property_id`: Foreign Key referencing `Properties(property_id)`, indicating the property being reviewed.  
+    * `rating`: Numerical rating (e.g., 1-5 stars).  
+    * `comment`: Textual feedback from the user.  
+    * `created_at`: Timestamp of when the review was submitted.  
+
+5.  **Payments**
+    * `payment_id`: Primary Key, unique identifier for the payment.  
+    * `booking_id`: Foreign Key referencing `Bookings(booking_id)`, linking the payment to a specific booking.  
+    * `amount`: The monetary value of the payment.  
+    * `payment_status`: Current status (e.g., 'succeeded', 'failed', 'pending').  
+    * `payment_date`: Timestamp of when the payment was processed.  
+    * `transaction_id`: Unique identifier provided by the payment processor.  
+
+### Relationships
+
+* A **User** can own (host) multiple **Properties** (One-to-Many: User -> Properties).  
+* A **User** can make multiple **Bookings** (One-to-Many: User -> Bookings).  
+* A **User** can write multiple **Reviews** (One-to-Many: User -> Reviews).   
+* A **Property** belongs to one **User** (host) (Many-to-One: Property -> User).  
+* A **Property** can have multiple **Bookings** (One-to-Many: Property -> Bookings).  
+* A **Property** can have multiple **Reviews** (One-to-Many: Property -> Reviews).  
+* A **Booking** is made by one **User** (guest) (Many-to-One: Booking -> User).  
+* A **Booking** is for one **Property** (Many-to-One: Booking -> Property).  
+* A **Booking** typically has one associated **Payment** (One-to-One: Booking <-> Payment, usually).  
+* A **Review** is written by one **User** (Many-to-One: Review -> User).  
+* A **Review** pertains to one **Property** (Many-to-One: Review -> Property).  
+* A **Payment** corresponds to one **Booking** (Many-to-One: Payment -> Booking).  
