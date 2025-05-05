@@ -166,3 +166,42 @@ This section details the core functional components of the Airbnb Clone backend.
 
 * **Data Optimization**
     This backend aspect focuses on ensuring the application runs efficiently, even with large amounts of data. Techniques like database indexing and caching are employed to speed up data retrieval and reduce server load, leading to a smoother user experience.
+
+## 🔐 API Security
+
+Ensuring the security of the API, user data, and transactions is a top priority for this project. The following measures are implemented to maintain a secure environment:
+
+### Key Security Measures Implemented
+
+* **Authentication:**
+    * **Mechanism:** Secure token-based authentication (e.g., JWT - JSON Web Tokens) will be used to verify the identity of users making requests to protected endpoints.
+    * **Purpose:** Ensures that only registered and logged-in users can access specific functionalities like booking properties or managing their profiles.
+
+* **Authorization:**
+    * **Mechanism:** Permissions checks are implemented at the endpoint level to ensure users can only perform actions they are allowed to (e.g., a user can only modify their own profile or delete properties they host).
+    * **Purpose:** Prevents users from accessing or modifying data that doesn't belong to them, enforcing roles like guest vs. host.
+
+* **HTTPS/TLS Encryption:**
+    * **Mechanism:** All communication between the client applications and the backend API will be encrypted using HTTPS (TLS).
+    * **Purpose:** Protects data in transit from eavesdropping or tampering, securing sensitive information like login credentials, personal details, and payment information.
+
+* **Input Validation & Sanitization:**
+    * **Mechanism:** All incoming data from requests (query parameters, request bodies) is rigorously validated against expected formats and sanitized to remove potentially malicious code.
+    * **Purpose:** Mitigates risks such as SQL Injection, Cross-Site Scripting (XSS), and other injection attacks that could compromise the database or user sessions.
+
+* **Rate Limiting:**
+    * **Mechanism:** Limits are imposed on the number of requests an IP address or user can make to the API within a specific time window.
+    * **Purpose:** Helps protect the service against brute-force login attempts and Denial-of-Service (DoS) attacks, ensuring platform availability.
+
+* **Secure Password Storage:**
+    * **Mechanism:** User passwords are not stored in plaintext. Instead, strong hashing algorithms (e.g., bcrypt, Argon2) with unique salts are used.
+    * **Purpose:** Makes it computationally infeasible for attackers to recover original passwords even if they gain access to the database.
+
+### Importance of Security in Key Areas
+
+* **Protecting User Data:** Security measures like **Authentication**, **Authorization**, and **HTTPS** are crucial to safeguard users' personal information (profiles, booking history) from unauthorized access or breaches, maintaining user privacy and trust.
+* **Securing Property Listings:** **Authorization** ensures that only property owners (hosts) can modify or delete their listings, preventing vandalism or unauthorized changes to crucial platform content. **Input Validation** prevents malicious content in descriptions or titles.
+* **Ensuring Booking Integrity:** **Authentication** and **Authorization** prevent unauthorized users from making, viewing, or cancelling bookings. **HTTPS** protects sensitive travel details during transmission.
+* **Securing Payments:** This is highly critical. **HTTPS** encrypts payment-related communication. Secure handling of API keys for the payment gateway (using environment variables) and **Input Validation** prevent tampering with transaction details, safeguarding against financial fraud.
+* **Maintaining Platform Reliability:** **Rate Limiting** is essential to prevent malicious actors from overwhelming the server, ensuring the platform remains available and responsive for legitimate users.
+
