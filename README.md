@@ -7,14 +7,15 @@ A comprehensive full-stack clone of Airbnb made for the ALX backend & frontend P
 
 1. 🚀 <a href="#project-overview">Project Overview</a>
 2. 🎯 <a href="#project-goals">Project Goals</a>
-3. ⚙️ <a href="#technology-stack">Technology Stack</a>(FE & BE)
-4. 📋 <a href="#uiux-design-planning">UI/UX Design Planning</a>(FE)
-5. 👥 <a href="#project-roles-and-responsibilities">Project Roles and Responsibilities</a>(FE)
-6. 🧩 <a href="#ui-component-patterns">UI Component Patterns</a>(FE)
-7. 🛠️ <a href="#features-overview">Features Overview</a>(BE)
-8. 💾 <a href="#database-design">Database Design</a>(BE)
-9. 🔐 <a href="#api-security">API Security</a>(BE)
-10. 🔄 <a href="#cicd-pipeline">CI/CD Pipeline</a>(BE)
+3. ⚙️ <a href="#technology-stack">Technology Stack</a> (FE & BE)
+4. 📋 <a href="#uiux-design-planning">UI/UX Design Planning</a> (FE)
+5. 👥 <a href="#project-roles-and-responsibilities">Project Roles and Responsibilities</a> (FE)
+5. 👥 <a href="#team-roles">Team Roles</a> (BE)
+6. 🧩 <a href="#ui-component-patterns">UI Component Patterns</a> (FE)
+7. 🛠️ <a href="#features-overview">Features Overview</a> (BE)
+8. 💾 <a href="#database-design">Database Design</a> (BE)
+9. 🔐 <a href="#api-security">API Security</a> (BE)
+10. 🔄 <a href="#cicd-pipeline">CI/CD Pipeline</a> (BE)
 11. 📈 <a href="#learning-objectives">Learning Objectives</a>
 12. 🚀 <a href="#getting-started">Getting Started</a>
 13. 📊 <a href="#project-status">Project Status</a>
@@ -142,6 +143,15 @@ Identifying and documenting design properties from mockup designs is crucial for
 | **DevOps Engineers** | Manages deployment pipelines, CI/CD implementation, server infrastructure, monitoring, security, scalability planning | Ensures reliable, scalable, and secure platform operation with efficient deployment and monitoring processes |
 | **Product Owner** | Defines product requirements, prioritizes features based on business value, represents stakeholder interests, manages backlog | Ensures the product meets business objectives and user needs through strategic feature prioritization |
 | **Scrum Master** | Facilitates agile ceremonies, removes team blockers, coaches team on agile practices, ensures process efficiency | Enables team productivity and continuous improvement through effective agile process management |
+
+## Team Roles
+
+| Role | Key Responsibilities | Contribution to Project Success |
+|------|---------------------|-------------------------------|
+| **Backend Developer** | Builds and maintains APIs, manages database architecture, implements business logic, ensures security, handles integrations | Provides the foundation and functionality that powers all platform features and ensures data integrity |
+| **QA/Engineer** | Ensures the backend functionalities are thoroughly tested and meet quality standards. | Maintains high quality standards and reduces post-launch issues through thorough testing and quality assurance |
+| **DevOps Engineer** | Manages deployment pipelines, CI/CD implementation, server infrastructure, monitoring, security, scalability planning | Ensures reliable, scalable, and secure platform operation with efficient deployment and monitoring processes |
+| **Database Administrator** | Manages database design, schema architecture, indexing strategies, query optimization, data migration, backup and recovery procedures, performance monitoring | Ensures optimal database performance, data integrity, and system reliability through strategic database management and optimization|
 
 ##  UI Component Patterns
 
