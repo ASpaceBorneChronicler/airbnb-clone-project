@@ -12,7 +12,7 @@ A comprehensive full-stack clone of Airbnb made for the ALX backend & frontend P
 5. 👥 <a href="#project-roles-and-responsibilities">Project Roles and Responsibilities</a> (FE)
 5. 👥 <a href="#team-roles">Team Roles</a> (BE)
 6. 🧩 <a href="#ui-component-patterns">UI Component Patterns</a> (FE)
-7. 🛠️ <a href="#features-breakdown">Features Breakdown</a> (BE)
+7. 🛠️ <a href="#feature-breakdown">Feature Breakdown</a> (BE)
 8. 💾 <a href="#database-design">Database Design</a> (BE)
 9. 🔐 <a href="#api-security">API Security</a> (BE)
 10. 🔄 <a href="#cicd-pipeline">CI/CD Pipeline</a> (BE)
@@ -213,7 +213,7 @@ Identifying and documenting design properties from mockup designs is crucial for
 - **Performance**: Optimized for fast loading and minimal resource usage
 - **Responsive**: Mobile-first design that works seamlessly across all device sizes
 
-##  Features Breakdown
+##  Feature Breakdown
 
 ### 1. API Documentation
 - **OpenAPI Standard**: Comprehensive API documentation for easy integration
